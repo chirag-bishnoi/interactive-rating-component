@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Overpass';
+    src: local('Overpass'),
+         local('overpass'),
+         url('assets/fonts/Overpass-Regular.woff2') format('woff2'),
+         url('assets/fonts/Overpass-Regular.woff')  format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Overpass';
+    src: local('Overpass'),
+         local('overpass'),
+         url('assets/fonts/Overpass-Bold.woff2') format('woff2'),
+         url('assets/fonts/Overpass-Bold.woff')  format('woff');
+    font-weight: 700;
+}
+
+:root {
+    --clr-white:hsl(0, 0%, 100%);
+    --clr-blue-100:hsl(217, 12%, 63%);
+    --clr-blue-200:hsl(213, 19%, 18%);
+    --clr-blue-300:hsl(216, 12%, 8%);
+    --clr-orange:hsl(25, 97%, 53%);
+    --clr-blue-blur:217, 12%, 63%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Overpass', system-ui, 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    background-color: var(--clr-blue-300);
+    color: var(--clr-white);
+    font-size: 0.938rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main {
+    background-color: var(--clr-blue-200);
+    max-width: 25.5rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-inline: 1.6rem;
+}
+
+p {
+    color: var(--clr-blue-100);
+}
+
+/* Main Styles */
+
+.star {
+    background-color: hsla(var(--clr-blue-blur), 0.1);
+    width: 45px;
+    height: 45px;
+    margin-top: .4rem;
+    margin-bottom: 2.4rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin-bottom: .5rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+}
+
+p {
+    line-height: 1.5;
+}
+
+.rating {
+    margin-block: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating span {
+
+    --size:50px;   
+
+    display: block;
+    cursor: pointer;
+    background-color: hsla(var(--clr-blue-blur), 0.15);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50px;
+    line-height: var(--size);
+    text-align: center;
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.rating span:hover{
+    background-color: var(--clr-orange);
+    color: var(--clr-blue-300);
+}
+
+.rating input:checked + span {
+    background-color: var(--clr-white);
+    color: var(--clr-blue-300);
+    font-weight: 700;
+}
+
+.input-radio {
+    /*Hide radio buttons*/
+
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+}
+
+.button {
+    background-color: var(--clr-orange);
+    color: var(--clr-blue-300);
+    border: none;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 45px;
+    padding-block: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: .95rem;
+    outline: none;
+    transition: background-color 0.1s ease ;
+}
+
+.button:is(:active, :focus-visible) {
+    background-color: var(--clr-white);
+}
+
+/*Thank You Message Page*/
+
+.center {
+    text-align: center;
+}
+
+.illustration {
+    margin-inline: auto;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+.orange-text {
+    color: var(--clr-orange);
+    background-color: hsla(var(--clr-blue-blur), 0.1);
+    width: 20ch;
+    margin-inline: auto;
+    padding-block: .3rem;
+    border-radius: 50px;
+    margin-bottom: 2.4rem;
+}
+
+.thanks-title {
+    font-size: clamp(1.5rem, 5vw, 1.7rem);
+    margin-bottom: 1rem;
+}
+
+@media(max-width:500px){
+    main {
+        padding: 1.7rem;
+    }
+}

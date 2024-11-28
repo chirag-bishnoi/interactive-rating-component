@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <main id="main-wrapper">
+    <div class="star">
+      <img class="star-icon" src="assets/images/icon-star.svg" alt="">
+    </div>
+    <h1 class="title">How did we do?</h1>
+    <p>
+      Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+    </p>
+
+
+
+    <form id="form">
+      <div class="rating">
+        <label>
+          <input type="radio" name="rating" value="1" class="input-radio"><span aria-placeholder="1 star">1</span>
+        </label>
+        <label>
+          <input type="radio" name="rating" value="2" class="input-radio"><span aria-placeholder="2 stars">2</span>
+        </label>
+        <label>
+          <input type="radio" name="rating" value="3" class="input-radio"><span aria-placeholder="3 stars">3</span>
+        </label>
+        <label>
+          <input type="radio" name="rating" value="4" class="input-radio"><span aria-placeholder="4 stars">4</span>
+        </label>
+        <label>
+          <input type="radio" name="rating" value="5" class="input-radio"><span aria-placeholder="5 stars">5</span>
+        </label>
+      </div>
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </main>
+
+  <!-- Thank you state -->
+
+  
+  <template id="temp" class="thank-you-msg">
+    <img src="assets/images/illustration-thank-you.svg" alt="" class="illustration">
+    <p class="center orange-text"> You selected xxx out of 5</p>
+    <h2 class="center thanks-title">Thank you!</h2>
+    <p class="center">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!
+    </p>
+  </template>
+  
+
+
+  <script src="main.js"></script>
+</body>
+</html>
